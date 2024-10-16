@@ -495,15 +495,15 @@
 /**
  * Swiper 3.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
- * 
+ *
  * http://www.idangero.us/swiper/
- * 
+ *
  * Copyright 2016, Vladimir Kharlampidi
  * The iDangero.us
  * http://www.idangero.us/
- * 
+ *
  * Licensed under MIT
- * 
+ *
  * Released on: February 7, 2016
  */
 ! function() {
@@ -11403,7 +11403,7 @@ jQuery(document).ready(function () {
         });
     }
     /*
-     * end custom scroll oder detail popup. 
+     * end custom scroll oder detail popup.
      */
 
     /*Main Navigation Function Start*/
@@ -11430,12 +11430,12 @@ jQuery(document).ready(function () {
         this.element = element;
         this.width = width;
         this.order = eleOrder;
-        this.offsetTop = element.offset().top;
+        // this.offsetTop = element.offset().top;
         this.defualtWidth = element.parent().width();
         this.defualtPos = elePos;
         this.stopper = stopTarget;
 
-        // Methods  
+        // Methods
         this.defaultValues = function () {
             this.element.css({
                 "position": "relative",
@@ -11562,9 +11562,9 @@ jQuery(document).ready(function () {
                 width: "95%"
             }
         }
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
+        // for (var selector in config) {
+        //     $(selector).chosen(config[selector]);
+        // }
     };
     /*Chosen Select Functions End*/
     /* Date Time picker */
@@ -11706,14 +11706,14 @@ jQuery(document).ready(function () {
     });
     /*Delivery Timing Dropdown Functions End*/
 
-    if ($(window).width() > 991) {
-        if (jQuery(".sticky-sidebar").length != '') {
-            $('.sticky-sidebar')
-                .theiaStickySidebar({
-                    additionalMarginTop: 30
-                });
-        }
-    }
+    // if ($(window).width() > 991) {
+    //     if (jQuery(".sticky-sidebar").length != '') {
+    //         $('.sticky-sidebar')
+    //             .theiaStickySidebar({
+    //                 additionalMarginTop: 30
+    //             });
+    //     }
+    // }
     /*Sticky Function End*/
 
     /*Location Popup Function Start*/
@@ -11729,4 +11729,3 @@ jQuery(document).ready(function () {
 /*----------Window Load Function Start----------*/
 
 /*HTML Functions End*/
-

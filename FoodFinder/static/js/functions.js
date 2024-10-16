@@ -38,7 +38,7 @@ jQuery(document).ready(function () {
     /*Location Menu Function End*/
 
     /*Fitvideo Script*/
-    
+
     var swiper = new Swiper('.testimonial.fancy .swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -226,7 +226,7 @@ jQuery(document).ready(function () {
     });
 
     /*
-     * sticky header code end 
+     * sticky header code end
      */
 
     if (jQuery(".default-pagination").lenght != "") {
@@ -274,26 +274,26 @@ jQuery(document).ready(function () {
     // }
     /*Location Menu Function End*/
     /*Chosen Select Functions Start*/
-    if (jQuery(".chosen-select, .chosen-select-deselect, .chosen-select-no-single, .chosen-select-no-results, .chosen-select-width").length != '') {
-        var config = {
-            '.chosen-select': {},
-            '.chosen-select-deselect': {
-                allow_single_deselect: true
-            },
-            '.chosen-select-no-single': {
-                disable_search_threshold: 10
-            },
-            '.chosen-select-no-results': {
-                no_results_text: 'Oops, nothing found!'
-            },
-            '.chosen-select-width': {
-                width: "95%"
-            }
-        }
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
-    }
+    // if (jQuery(".chosen-select, .chosen-select-deselect, .chosen-select-no-single, .chosen-select-no-results, .chosen-select-width").length != '') {
+    //     var config = {
+    //         '.chosen-select': {},
+    //         '.chosen-select-deselect': {
+    //             allow_single_deselect: true
+    //         },
+    //         '.chosen-select-no-single': {
+    //             disable_search_threshold: 10
+    //         },
+    //         '.chosen-select-no-results': {
+    //             no_results_text: 'Oops, nothing found!'
+    //         },
+    //         '.chosen-select-width': {
+    //             width: "95%"
+    //         }
+    //     }
+    //     for (var selector in config) {
+    //         $(selector).chosen(config[selector]);
+    //     }
+    // }
 
     /*Chosen Select Functions End*/
     /* Date Time picker */
@@ -497,7 +497,7 @@ jQuery(document).ready(function () {
 
 
 /* ---------------------------------------------------------------------------
- * Post like Counter 
+ * Post like Counter
  * --------------------------------------------------------------------------- */
 function foodbakery_post_likes_count(admin_url, id, obj) {
     "use strict";

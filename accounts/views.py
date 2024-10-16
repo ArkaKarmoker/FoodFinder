@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 
 from django.core.exceptions import PermissionDenied
 from vendor.models import Vendor
+from django.template.defaultfilters import slugify
 
 
 # Restrict the vendor from accessing the customer page
@@ -51,7 +52,8 @@ def registerUser(request):
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
-            user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
+            user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email,
+                                            password=password)
             user.role = User.CUSTOMER
             user.save()
 
@@ -75,7 +77,7 @@ def registerUser(request):
 def registerVendor(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are already logged in!')
-        return redirect('dashboard')
+        return redirect('myAccount')
     elif request.method == 'POST':
         # store the data and create the user
         form = UserForm(request.POST)
@@ -86,11 +88,14 @@ def registerVendor(request):
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
-            user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
+            user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email,
+                                            password=password)
             user.role = User.VENDOR
             user.save()
             vendor = v_form.save(commit=False)
             vendor.user = user
+            vendor_name = v_form.cleaned_data['vendor_name']
+            vendor.vendor_slug = slugify(vendor_name) + '-' + str(user.id)
             user_profile = UserProfile.objects.get(user=user)
             vendor.user_profile = user_profile
             vendor.save()
@@ -133,7 +138,7 @@ def activate(request, uidb64, token):
     else:
         messages.error(request, 'Invalid activation link')
         return redirect('myAccount')
-        
+
 
 def login(request):
     if request.user.is_authenticated:
@@ -153,6 +158,7 @@ def login(request):
             messages.error(request, 'Invalid login credentials')
             return redirect('login')
     return render(request, 'accounts/login.html')
+
 
 def logout(request):
     auth.logout(request)
