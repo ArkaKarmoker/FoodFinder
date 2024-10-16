@@ -12,3 +12,9 @@ Dynamic Nearby Restaurant Marketplace
 ![image](https://github.com/user-attachments/assets/dd272ac6-faa4-4454-9482-83d37f8fca7e)
 
 ![image](https://github.com/user-attachments/assets/3c5200b6-cedf-4a7d-a0cb-158fec67934d)
+
+![image](https://github.com/user-attachments/assets/5cc99822-d244-4f07-8040-1466d3429562)
+
+![image](https://github.com/user-attachments/assets/507b1686-46c1-4d90-8cec-e42c466c6671)
+
+![image](https://github.com/user-attachments/assets/f5853b3d-a2f6-415d-9771-b83c388de78b)
