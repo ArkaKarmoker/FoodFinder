@@ -1,8 +1,6 @@
 # FoodFinder
 Dynamic Nearby Restaurant Marketplace
 
-# This is an ongoing project of CSE299 - Junior Design Course - Summer 2024 - North South University
-
 ![image](https://github.com/user-attachments/assets/9676d4a3-4d01-41a0-b549-bb151141719c)
 
 ![image](https://github.com/user-attachments/assets/553b351e-9e78-4677-92d7-e9f7cad073b5)
