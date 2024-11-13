@@ -11,9 +11,9 @@ from .utils import generate_order_number, order_total_by_vendor
 from accounts.utils import send_notification
 from django.contrib.auth.decorators import login_required
 # import razorpay
-# from foodOnline_main.settings import RZP_KEY_ID, RZP_KEY_SECRET
+# from FoodFinder.settings import RZP_KEY_ID, RZP_KEY_SECRET
 from django.contrib.sites.shortcuts import get_current_site
-#
+
 # client = razorpay.Client(auth=(RZP_KEY_ID, RZP_KEY_SECRET))
 
 
@@ -191,7 +191,7 @@ def payments(request):
                 send_notification(mail_subject, mail_template, context)
 
         # CLEAR THE CART IF THE PAYMENT IS SUCCESS
-        # cart_items.delete()
+        cart_items.delete()
 
         # RETURN BACK TO AJAX WITH THE STATUS SUCCESS OR FAILURE
         response = {

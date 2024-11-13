@@ -12,7 +12,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <div class="tabs-holder horizontal">
                         <ul class="stickynav-tabs nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-shopping-cart text-danger"></i>Review Your Billing Address</a></li>
+                            <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-shopping-cart text-primary"></i>Review Your Billing Address</a></li>
                             
                         </ul>
                         <div class="tab-content">
@@ -30,7 +30,7 @@
                                             <div><b>Email: </b>{{ order.email }}</div>
                                             <div><b>Payment: </b>{{ order.payment_method }}</div>
                                             <br>
-                                            <div><a href="{% url 'checkout' %}" class="btn btn-outline-danger">Edit</a></div>
+                                            <div><a href="{% url 'checkout' %}" class="btn btn-outline-primary">Edit</a></div>
                                             <br>
 
                                         </div>
