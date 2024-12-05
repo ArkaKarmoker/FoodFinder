@@ -2,7 +2,7 @@ asgiref==3.8.1
 certifi==2024.8.30
 charset-normalizer==3.4.0
 Django==5.1.2
-GDAL @ file:///C:/Users/Arka%20Karmoker/Desktop/Project/FoodFinder-main/GDAL-3.9.2-cp313-cp313-win_amd64.whl#sha256=a65469cb4f1fb407f55483b3a71395cc658eec15c579d4a62e5d4bad8f802a41
+GDAL @ file://./GDAL-3.9.2-cp313-cp313-win_amd64.whl
 idna==3.10
 pillow==11.0.0
 psycopg==3.2.3
