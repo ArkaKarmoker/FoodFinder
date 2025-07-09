@@ -99,14 +99,28 @@ WSGI_APPLICATION = 'FoodFinder.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         # 'ENGINE': 'django.db.backends.postgresql',
+#         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': config('DB_HOST'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql',
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
+        'NAME': config('DB_NAME'),         # usually 'postgres'
+        'USER': config('DB_USER'),         # usually 'postgres'
+        'PASSWORD': config('DB_PASSWORD'), # your Supabase password
+        'HOST': config('DB_HOST'),         # e.g. db.abcd1234.supabase.co
+        'PORT': config('DB_PORT', default='5432'),
+        'OPTIONS': {
+            'sslmode': 'require'           # Required for Supabase SSL
+        },
     }
 }
 
